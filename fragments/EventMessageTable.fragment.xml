@@ -1,0 +1,97 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<Table id="EventMessageTable" xmlns="sap.m" xmlns:core="sap.ui.core" mode="SingleSelectMaster" items="{ToEventMessageOverview}" selectionChange="OnSelectionChange" class="sapUiResponsiveMargin">
+    <headerToolbar>
+        <Toolbar>
+            <Label id="TableTitle" text="{i18n>EVENT_MESSAGE_TITLE}"></Label>		                    
+            <ToolbarSpacer></ToolbarSpacer>
+            <Button id="NavToEVMBtn" icon="sap-icon://activity-items" press="goToNextPage" enabled="false" tooltip="{i18n>BUTTON_TOOLTIP_EVMDETAILS}"/>
+            <ToolbarSpacer width="1%"></ToolbarSpacer>
+            <Button icon="sap-icon://add" press="fnOnAddButtonPressed" tooltip="{i18n>BUTTON_TOOLTIP_ADD_DELAY}"/> 
+        </Toolbar>
+    </headerToolbar>
+    <columns>
+        <Column minScreenWidth="Small" demandPopin="false" width="2.5em"> 
+        </Column>
+        <Column> 
+            <header>
+                <Text text="{/#FreightOrderEventMessageOverview/EventCodeName/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_EXP_EVT_DESC}"/>
+            </header>
+        </Column>
+        
+        <Column demandPopin="true" minScreenWidth="Small" popinDisplay="Inline"> 
+            <header>
+                <Text text="{/#FreightOrderEventMessageOverview/EventLocation/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_EXP_EVT_LOC}"/>
+            </header>
+        </Column>
+        
+        <Column demandPopin="false" minScreenWidth="Small"> 
+            <header>
+                <Text text="{/#FreightOrderEventMessageOverview/EventReasonText/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_EXP_EVT_REASON}"/>
+            </header>
+        </Column>
+        
+        <Column demandPopin="true" minScreenWidth="Small"> 
+            <header>
+                <Text text="{/#FreightOrderEventMessageOverview/EventExpectedDateTime/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_EXP_EVT_DATE_TIME}"/>
+            </header>
+        </Column>
+        
+        <Column demandPopin="true" minScreenWidth="Small"> 
+            <header>
+                <Text text="{/#FreightOrderEventMessageOverview/EventDateTime/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_ACT_EVT_DATE_TIME}"/>
+            </header>
+        </Column>
+        
+        <Column width="3em" hAlign="Right"> 
+        </Column>
+    </columns>
+        
+    <items>
+        <ColumnListItem>
+            <cells>
+                <core:Icon src="{ 
+                                    parts: [{path:'EventStatusExtended'}],
+                                    formatter:'sap.zzem.fo.visibility.util.formatter.iconFormatter'
+                                }" 
+                                tooltip="{ 
+                                    parts: [{path:'EventStatusExtended'}],
+                                    formatter: 'sap.zzem.fo.visibility.util.formatter.iconTooltipFormatter'
+                                }" />
+                <Text text="{
+                            parts: [
+                                { path: 'DelayedExpectedEventCodeName' },
+                                { path: 'EventCodeName' }
+                            ],
+                            formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' 
+                            }" />
+                <Text text="{
+                            parts: [
+                                { path: 'EventLocationName' },
+                                { path: 'EventLocation' }
+                            ],
+                            formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' 
+                            }" />
+                <Text text="{EventReasonText}" />
+                <Text text="{
+                            parts: [
+                                { path: 'EventExpectedDateTime' },
+                                { path: 'EventExpectedTimeZone' }
+                            ],
+                            formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeFormatter' 
+                            }" />
+                <Text text="{
+                            parts: [
+                                { path: 'EventDateTime' },
+                                { path: 'EventTimeZone' }
+                            ],
+                            formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeFormatter' 
+                            }" />
+                <Button icon="sap-icon://edit" press="fnOnReportButtonPressed" visible="{path:'EventStatusExtended', formatter:'sap.zzem.fo.visibility.util.formatter.reportEventFormatter'}" enabled="true"  tooltip="{i18n>BUTTON_TOOLTIP_REPORT}"/>
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>

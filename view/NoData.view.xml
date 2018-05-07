@@ -1,0 +1,11 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View controllerName="zzem.fo.visibility.view.NoData" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" showNavButton="true" navButtonPress="handleNavButtonPress">
+  <Page title="{i18n>NODATA_VIEW_TITLE}">
+    <content></content>
+  </Page>
+</core:View>

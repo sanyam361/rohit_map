@@ -1,0 +1,48 @@
+{  
+   "d":{  
+      "results":[  
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventHandlerDetailsS('3640B5B223D31ED583B56578D3439C2A')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventHandlerDetailsS('3640B5B223D31ED583B56578D3439C2A')",
+               "type":"em_srv.FreightOrderEventHandlerDetails"
+            },
+            "EventHandlerUUID":"3640B5B223D31ED583B56578D3439C2A",
+            "ZSFTemperatureMin":"",
+            "TransportationStatus":"Arrived",
+            "ShippingType":"",
+            "VehicleRegistrationNumber":"",
+            "NewField":"000000000000000000000000000000000000000000000000000000000000",
+            "PlannedExecutionStartTimeZone":"UTC+8",
+            "PlannedExecutionStartDateTime":"\/Date(1396332000000+0000)\/",
+            "PlannedExecutionEndTimeZone":"UTC+8",
+            "PlannedExecutionEndDateTime":"\/Date(1400220000000+0000)\/",
+            "NextStopAddress":"",
+            "BlockStatus":"Not Blocked",
+            "ToEventMessageOverview":{  
+            }
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventHandlerDetailsS('3640B5B223D31EE589DCD5D49E4844F1')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventHandlerDetailsS('3640B5B223D31EE589DCD5D49E4844F1')",
+               "type":"em_srv.FreightOrderEventHandlerDetails"
+            },
+            "EventHandlerUUID":"3640B5B223D31EE589DCD5D49E4844F1",
+            "ZSFTemperatureMin":"",
+            "TransportationStatus":"In Transit",
+            "ShippingType":"LTL (Less Than Truck Load)",
+            "VehicleRegistrationNumber":"MA-EM 2015",
+            "NewField":"000000000000000000000000000000000000000000000000000000000000",
+            "PlannedExecutionStartTimeZone":"CET",
+            "PlannedExecutionStartDateTime":"\/Date(1436543960000+0000)\/",
+            "PlannedExecutionEndTimeZone":"CET",
+            "PlannedExecutionEndDateTime":"\/Date(1436564400000+0000)\/",
+            "NextStopAddress":"BahnhofstraÃŸe 1 / D-68309 Mannheim",
+            "BlockStatus":"Not Blocked",
+            "ToEventMessageOverview":{
+            }
+         }
+      ]
+   }
+}

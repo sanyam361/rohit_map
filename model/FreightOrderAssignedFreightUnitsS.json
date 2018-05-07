@@ -1,0 +1,40 @@
+{  
+   "d":{  
+      "results":[  
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderAssignedFreightUnitsS(EventHandlerUUID='3640B5B223D31EE589DCD5D49E4844F1',FreightUnit='4100027281',ControlParameterIndex='0000000010')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderAssignedFreightUnitsS(EventHandlerUUID='3640B5B223D31EE589DCD5D49E4844F1',FreightUnit='4100027281',ControlParameterIndex='0000000010')",
+               "type":"em_srv.FreightOrderAssignedFreightUnits"
+            },
+            "EventHandlerUUID":"3640B5B223D31EE589DCD5D49E4844F1",
+            "FreightUnit":"4100027281",
+            "ControlParameterIndex":"0000000010",
+            "ConsigneeAddress":"EM Consignee Quadrat / G1 6 / D-68159 Mannheim",
+            "FreightUnitExpectedArrivalTimezone":"CET",
+            "FreightUnitExpectedArrivalDateTime":"\/Date(1436564400000+0000)\/",
+            "FreightUnitUnloadingLocation":"EM_MANNHEIM_ST",
+            "ShipperName":"EM Trucking D-69190 Walldorf",
+            "Shipper":"EM_CARR_01",
+            "TransportationRequest":"2100008988"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderAssignedFreightUnitsS(EventHandlerUUID='3640B5B223D31EE589DCD5D49E4844F1',FreightUnit='',ControlParameterIndex='0000000000')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderAssignedFreightUnitsS(EventHandlerUUID='3640B5B223D31EE589DCD5D49E4844F1',FreightUnit='',ControlParameterIndex='0000000000')",
+               "type":"em_srv.FreightOrderAssignedFreightUnits"
+            },
+            "EventHandlerUUID":"3640B5B223D31EE589DCD5D49E4844F1",
+            "FreightUnit":"",
+            "ControlParameterIndex":"0000000000",
+            "ConsigneeAddress":"",
+            "FreightUnitExpectedArrivalTimezone":"",
+            "FreightUnitExpectedArrivalDateTime":null,
+            "FreightUnitUnloadingLocation":"",
+            "ShipperName":"",
+            "Shipper":"",
+            "TransportationRequest":""
+         }
+      ]
+   }
+}

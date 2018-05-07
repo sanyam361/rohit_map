@@ -1,0 +1,16 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<mvc:View controllerName="zzem.fo.visibility.view.App" displayBlock="true" height="100%" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<SplitApp id="fioriContent" mode="ShowHideMode" showHeader="false">
+		<masterPages>
+			<!-- filled dynamically by routing -->
+		</masterPages>
+		<detailPages>
+			<!-- filled dynamically by routing -->
+		</detailPages>
+	</SplitApp>
+</mvc:View>

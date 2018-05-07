@@ -1,0 +1,54 @@
+{  
+   "d":{  
+      "results":[
+      {  
+             "__metadata":{  
+                "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventMessageOverviewS(EventHandlerUUID='3640B5B223D31ED583B56578D3439C2A',EventMessageUUID='3640B5B223D31ED588F6619BFAE54D2D',ExpectedEventSequenceNumber='00000002')",
+                "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventMessageOverviewS(EventHandlerUUID='3640B5B223D31ED583B56578D3439C2A',EventMessageUUID='3640B5B223D31ED588F6619BFAE54D2D',ExpectedEventSequenceNumber='00000002')",
+                "type":"em_srv.FreightOrderEventMessageOverview"
+             },
+             "EventHandlerUUID":"3640B5B223D31ED583B56578D3439C2A",
+             "EventMessageUUID":"3640B5B223D31ED588F6619BFAE54D2D",
+             "ExpectedEventSequenceNumber":"00000002",
+             "EventDateTime":"\/Date(1436175900000+0000)\/",
+             "EventTimeZone":"UTC+8",
+             "EventMessageTrackingID":"6100014622",
+             "EventCode":"DEPARTURE",
+             "EventStatusExtended":"07",
+             "EventCodeName":"Departure",
+             "EventLocationName":"Beijing",
+             "EventLocation":"CP_BEIJING",
+             "EventReasonText":"",
+             "EventExpectedDateTime":"\/Date(1396332000000+0000)\/",
+             "EventExpectedTimeZone":"UTC+8",
+             "DelayedExpectedEventCodeName":"",
+             "ExpectedEventDelayInHours":"11068  h",
+             "ExpectedEventDelayVS":"Error"
+          },
+          {  
+             "__metadata":{  
+                "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventMessageOverviewS(EventHandlerUUID='3640B5B223D31ED583B56578D3439C2A',EventMessageUUID='3640B5B223D31ED588F6662AF0C14D32',ExpectedEventSequenceNumber='00000001')",
+                "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventMessageOverviewS(EventHandlerUUID='3640B5B223D31ED583B56578D3439C2A',EventMessageUUID='3640B5B223D31ED588F6662AF0C14D32',ExpectedEventSequenceNumber='00000001')",
+                "type":"em_srv.FreightOrderEventMessageOverview"
+             },
+             "EventHandlerUUID":"3640B5B223D31ED583B56578D3439C2A",
+             "EventMessageUUID":"3640B5B223D31ED588F6662AF0C14D32",
+             "ExpectedEventSequenceNumber":"00000001",
+             "EventDateTime":"\/Date(1436175960000+0000)\/",
+             "EventTimeZone":"UTC+8",
+             "EventMessageTrackingID":"6100014622",
+             "EventCode":"ARRIV_DEST",
+             "EventStatusExtended":"07",
+             "EventCodeName":"Arrival at Destination",
+             "EventLocationName":"Shanghai",
+             "EventLocation":"CP_SHANGHAI",
+             "EventReasonText":"",
+             "EventExpectedDateTime":"\/Date(1400220000000+0000)\/",
+             "EventExpectedTimeZone":"UTC+8",
+             "DelayedExpectedEventCodeName":"",
+             "ExpectedEventDelayInHours":"9988  h",
+             "ExpectedEventDelayVS":"Error"
+          }
+      ]
+   }
+}

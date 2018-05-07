@@ -1,0 +1,42 @@
+{  
+   "d":{  
+      "results":[  
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventMessageDetailsS(EventHandlerUUID='3640B5B223D31ED583B56578D3439C2A',EventMessageUUID='3640B5B223D31ED588F6619BFAE54D2D',ExpectedEventSequenceNumber='00000002')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventMessageDetailsS(EventHandlerUUID='3640B5B223D31ED583B56578D3439C2A',EventMessageUUID='3640B5B223D31ED588F6619BFAE54D2D',ExpectedEventSequenceNumber='00000002')",
+               "type":"em_srv.FreightOrderEventMessageDetails"
+            },
+            "EventHandlerUUID":"3640B5B223D31ED583B56578D3439C2A",
+            "EventMessageUUID":"3640B5B223D31ED588F6619BFAE54D2D",
+            "ExpectedEventSequenceNumber":"00000002",
+            "ZSFHumidityEvent":"",
+            "EventSender999":"",
+            "EventSenderName":"",
+            "EventSender":"",
+            "EventDateTime":"\/Date(1436175900000+0000)\/",
+            "EventTimeZone":"UTC+8",
+            "NewExpectedEventDateTime":null,
+            "NewExpectedEventTimeZone":"",
+            "NewExpectedDateTime":null,
+            "NewExpectedTimeZone":"",
+            "EventCode":"DEPARTURE",
+            "EventStatusExtended":"07",
+            "EventCodeName":"Departure",
+            "EventLocationName":"Beijing",
+            "EventLocation":"CP_BEIJING",
+            "EventReasonText":"",
+            "EventExpectedDateTime":"\/Date(1396332000000+0000)\/",
+            "EventExpectedTimeZone":"UTC+8",
+            "EvtMessageDateTime":"\/Date(1436175962000+0000)\/",
+            "MessageTimeZone":"CET",
+            "DelayedExpectedEventLocationName":"",
+            "DelayedExpectedEventCode":"",
+            "DelayedExpectedEventCodeName":"",
+            "DelayedExpectedEventLocation":"",
+            "ExpectedEventDelayInHours":"11068  h",
+            "ExpectedEventDelayVS":"Error"
+         }
+      ]
+   }
+}

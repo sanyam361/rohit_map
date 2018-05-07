@@ -1,0 +1,24 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<form:SimpleForm labelSpanL="5" labelSpanM="5" labelSpanS="5" layout="ResponsiveGridLayout" maxContainerCols="2"
+	xmlns:form="sap.ui.layout.form" xmlns="sap.m">
+	<Label text="{/#FreightOrderEventHandlerDetails/ShippingType/@sap:label}"></Label>
+	<Text text="{ShippingType}"/>
+	<Label text="{/#FreightOrderEventHandlerDetails/PlannedExecutionStartDateTime/@sap:label}"></Label>
+	<Text
+		text="{ parts: [ { path: 'PlannedExecutionStartDateTime' }, { path: 'PlannedExecutionStartTimeZone' } ], formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeDialogFormatter' }"/>
+	<Label text="{/#FreightOrderEventHandlerDetails/PlannedExecutionEndDateTime/@sap:label}"></Label>
+	<Text
+		text="{ parts: [ { path: 'PlannedExecutionEndDateTime' }, { path: 'PlannedExecutionEndTimeZone' } ], formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeDialogFormatter' }"/>
+	<Label text="{/#FreightOrderEventHandlerDetails/VehicleRegistrationNumber/@sap:label}"></Label>
+	<Text text="{VehicleRegistrationNumber}"/>
+	<Label text="{/#FreightOrderEventHandlerDetails/TransportationStatus/@sap:label}"></Label>
+	<Text text="{TransportationStatus}"/>
+	<Label text="{/#FreightOrderEventHandlerDetails/BlockStatus/@sap:label}"></Label>
+	<Text text="{BlockStatus}"/>
+	<Label text="{/#FreightOrderEventHandlerDetails/NextStopAddress/@sap:label}"></Label>
+	<Text text="{ path:'NextStopAddress', formatter:'sap.zzem.fo.visibility.util.formatter.AddressFormatter' }"/>
+</form:SimpleForm>

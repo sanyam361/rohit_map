@@ -1,0 +1,21 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<ObjectListItem number="{CurrentDelayInHours}"
+	numberState="{ path:'CurrentDelayInHoursVS', formatter:'sap.zzem.fo.visibility.util.formatter.valueStateFormatter' }" press="handleSelect"
+	title="{ parts: [ { 'path' : 'SourceLocationCityName'}, { 'path' : 'i18n>CONJUNCTION'}, { 'path' : 'DestinationLocationCityName'} ] }"
+	type="{device>/listItemType}" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<attributes>
+		<ObjectAttribute text=" {TransportationOrder} "></ObjectAttribute>
+		<ObjectAttribute
+			text="{ parts: [ {path : 'CarrierDescription'}, {path : 'Carrier'} ], formatter: 'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"></ObjectAttribute>
+		<ObjectAttribute text=" {TransportationModeCategory} "></ObjectAttribute>
+	</attributes>
+	<firstStatus>
+		<ObjectStatus state="{ path:'DeliveryStatusVS', formatter:'sap.zzem.fo.visibility.util.formatter.valueStateFormatter' }"
+			text="{DeliveryStatus}"></ObjectStatus>
+	</firstStatus>
+	<secondStatus></secondStatus>
+</ObjectListItem>

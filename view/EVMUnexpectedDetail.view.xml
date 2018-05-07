@@ -1,0 +1,43 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<mvc:View controllerName="zzem.fo.visibility.view.EVMUnexpectedDetail" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page class="sapUiFioriObjectPage" id="evmUnexpectedDetailsPage" navButtonPress="handleNavButtonPress" showNavButton="true"
+		title="{i18n>EVM_DETAIL_TITLE}">
+		<content>
+			<ObjectHeader id="evmUnexpectedDetailHeader" number="{ExpectedEventDelayInHours}"
+				numberState="{ path:'ExpectedEventDelayVS', formatter:'sap.zzem.fo.visibility.util.formatter.valueStateFormatter' }" title="{EventCodeName}">
+				<attributes>
+					<ObjectAttribute
+						text="{ parts: [ {path : 'EventLocation'}, {path : 'EventLocationName'} ], formatter: 'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"></ObjectAttribute>
+				</attributes>
+				<statuses></statuses>
+			</ObjectHeader>
+			<VBox id="evmUnexpectedDetailContainer"></VBox>
+		</content>
+		<dependents>
+			<form:SimpleForm id="evmUnexpectedForm" maxContainerCols="2">
+				<Label text="{/#FreightOrderEventMessageDetails/EventDateTime/@sap:label}"></Label>
+				<Text
+					text="{ parts: [ { path: 'EventDateTime' }, { path: 'EventTimeZone' } ], formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeDialogFormatter' }"/>
+				<Label text="{/#FreightOrderEventMessageDetails/EvtMessageDateTime/@sap:label}"></Label>
+				<Text
+					text="{ parts: [ { path: 'EvtMessageDateTime' }, { path: 'MessageTimeZone' } ], formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeDialogFormatter' }"/>
+				<Label text="{/#FreightOrderEventMessageDetails/DelayedExpectedEventCodeName/@sap:label}"></Label>
+				<Text text="{DelayedExpectedEventCodeName}"/>
+				<Label text="{/#FreightOrderEventMessageDetails/DelayedExpectedEventLocationName/@sap:label}"></Label>
+				<Text
+					text="{ parts: [ { path: 'DelayedExpectedEventLocationName' }, { path: 'DelayedExpectedEventLocation' } ], formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"/>
+				<Label text="{/#FreightOrderEventMessageDetails/NewExpectedDateTime/@sap:label}"></Label>
+				<Text
+					text="{ parts: [ { path: 'NewExpectedDateTime' }, { path: 'NewExpectedTimeZone' } ], formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeDialogFormatter' }"/>
+			</form:SimpleForm>
+		</dependents>
+		<footer>
+			<Bar></Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,44 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<ObjectHeader id="detailHeader" xmlns="sap.m" 
+        title="{ 
+                parts: [
+                        { 'path' : 'SourceLocationCityName'},
+                        { 'path' : 'i18n>CONJUNCTION'},
+                        { 'path' : 'DestinationLocationCityName'}
+                    ]
+                }"
+        number="{CurrentDelayInHours}"
+        
+        numberState="{
+                path:'CurrentDelayInHoursVS',
+                formatter:'sap.zzem.fo.visibility.util.formatter.valueStateFormatter'
+        }"> 
+        
+    <attributes>
+        <ObjectAttribute text="
+                            {i18n>FREIGHTORDER_NO}
+                            {TransportationOrder}
+                        ">
+        </ObjectAttribute>
+    </attributes>
+        
+    <statuses>
+        <ObjectStatus 
+            text="{DeliveryStatus}" 
+            
+            state="{
+                    path:'DeliveryStatusVS',
+                    formatter:'sap.zzem.fo.visibility.util.formatter.valueStateFormatter'
+            }">
+        </ObjectStatus>
+        <ObjectStatus id="inactiveStatus"
+            text="{i18n>INACTIVE}" 
+            visible= "false"
+            state="Error">
+        </ObjectStatus>
+    </statuses>
+</ObjectHeader>

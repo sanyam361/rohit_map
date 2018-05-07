@@ -1,0 +1,150 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<mvc:View controllerName="zzem.fo.visibility.view.Detail" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core" xmlns:vbm="sap.ui.vbm" >
+  <Page title="{i18n>DETAIL_TITLE}" class="sapUiFioriObjectPage" showNavButton="true" navButtonPress="handleNavButtonPress">
+    <core:Fragment fragmentName="zzem.fo.visibility.fragments.DetailObjectHeader" type="XML"/>
+    <IconTabBar id="EventHandlerIconTabBar" expanded="{device>/isNoPhone}" select="fnOnSelectIconTabFilter">
+      <items>
+        <IconTabFilter id="iconTabBarFilter1" icon="sap-icon://hint" tooltip="{i18n>detailIconTabBarInfo}">
+          <Button text="Get the current position" press="getPosition"></Button>
+          <vbm:GeoMap id="GeoMap" legendVisible="true" scaleVisible="true" width="100%" height="600px" initialPosition="0;0;0" centerPosition="0;0"
+            initialZoom="2" zoomlevel="3" enableAnimation="false" refMapLayerStack="Default" disableZoom="false" disablePan="false"
+            contextMenu="onContextMenu">
+            <vbm:resources/>
+            <vbm:legend/>
+            <vbm:vos>
+              <vbm:Spots items="{StopSet}">
+                <vbm:Spot position="{LocGeoData}" tooltip="{LocDescr}"/>
+                <!--<vbm:Spot id="Spot2" position="8.683340000;50.112000000;0" tooltip="Frankfurt"/>-->
+              </vbm:Spots>
+              <vbm:Spots>
+                <vbm:Spot id="currLoc" position="" tooltip="Current Location"/>
+                <!--<vbm:Spot id="Spot2" position="8.683340000;50.112000000;0" tooltip="Frankfurt"/>-->
+              </vbm:Spots>
+              <vbm:Circles>
+                <vbm:items/>
+              </vbm:Circles>
+              <vbm:Routes items="{StageSet}">
+                <vbm:Route position="{LocGeoData}" color="rgb(117,148,34)" colorBorder="rgb(255,255,255)" linewidth="3" click="onClickRoute"
+                  contextMenu="onContextMenuRoute"/>
+              </vbm:Routes>
+            </vbm:vos>
+          </vbm:GeoMap>
+          </IconTabFilter>
+          <IconTabFilter key="EventHandlerDetails" icon="sap-icon://hint" text="{i18n>EHD_TITLE}" tooltip="{i18n>ICONTABFILTER_TOOLTIP_EHDETAILS}"></IconTabFilter>
+          <IconTabFilter xmlns="sap.m" key="FreightOrderAssignedFreightUnitsS" icon="sap-icon://database" text="{i18n>FU_TITLE}"
+            tooltip="{i18n>ICONTABFILTER_TOOLTIP_FU}">
+            <form:SimpleForm maxContainerCols="1">
+              <Table mode="None">
+                <columns>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderAssignedFreightUnits/FreightUnit/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_ASSIGNED_FU}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderAssignedFreightUnits/TransportationRequest/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_TRQ}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderAssignedFreightUnits/ShipperName/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_SHIPPER}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderAssignedFreightUnits/ConsigneeAddress/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_CONSIGNEE}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderAssignedFreightUnits/FreightUnitUnloadingLocation/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_FU_UNLOAD_LOC}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderAssignedFreightUnits/FreightUnitExpectedArrivalDateTime/@sap:label}"
+                        tooltip="{i18n>COLUMN_TOOLTIP_EXP_FU_ARRIVAL_TIME}"/>
+                    </header>
+                  </Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text text="{FreightUnit}"/>
+                      <Text text="{TransportationRequest}"/>
+                      <Text text="{ parts: [ { path: 'ShipperName' }, { path: 'Shipper' } ], formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"/>
+                      <Text
+                        text="{ parts: [ { path: 'ConsigneeAddress' }, { path: 'ConsigneeAddress' } ], formatter:'sap.zzem.fo.visibility.util.formatter.AddressFormatter' }"/>
+                      <Text text="{FreightUnitUnloadingLocation}"/>
+                      <Text
+                        text="{ parts: [ { path:'FreightUnitExpectedArrivalDateTime' }, { path:'FreightUnitExpectedArrivalTimezone'} ], formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeFormatter' }"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </form:SimpleForm>
+          </IconTabFilter>
+          <IconTabFilter xmlns="sap.m" key="FreightOrderRelatedSalesOrdersS" icon="sap-icon://my-sales-order" text="{i18n>SO_TITLE}"
+            tooltip="{i18n>ICONTABFILTER_TOOLTIP_SO}">
+            <form:SimpleForm maxContainerCols="1">
+              <Table mode="None">
+                <columns>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderRelatedSalesOrders/ConsigneeName/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_CONSIGNEE}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderRelatedSalesOrders/SalesOrder/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_SO}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderRelatedSalesOrders/Delivery/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_DO}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderRelatedSalesOrders/PurchaseOrderByCustomer/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_PO}"/>
+                    </header>
+                  </Column>
+                  <Column demandPopin="true" popinDisplay="Inline">
+                    <header>
+                      <Text text="{/#FreightOrderRelatedSalesOrders/TransportationRequest/@sap:label}" tooltip="{i18n>COLUMN_TOOLTIP_TRQ}"/>
+                    </header>
+                  </Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text
+                        text="{ parts: [ { path: 'ConsigneeName' }, { path: 'Consignee' } ], formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"/>
+                      <Text text="{SalesOrder}"/>
+                      <Text text="{Delivery}"/>
+                      <Text text="{PurchaseOrderByCustomer}"/>
+                      <Text text="{TransportationRequest}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </form:SimpleForm>
+          </IconTabFilter>
+        </items>
+      </IconTabBar>
+      <core:Fragment fragmentName="zzem.fo.visibility.fragments.EventMessageTable" type="XML"/>
+      <footer>
+        <Bar>
+          <contentRight>
+            <Button icon="sap-icon://action" press="openActionSheet" id="actionButton"></Button>
+          </contentRight>
+        </Bar>
+      </footer>
+    </Page>
+  </mvc:View>

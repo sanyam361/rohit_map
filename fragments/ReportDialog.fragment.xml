@@ -1,0 +1,42 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<Dialog contentWidth="40%" title="{i18n>UEM_REP_EXP_DIALOG_TITLE}" xmlns:core="sap.ui.core" afterClose="onDialogAfterClose" xmlns:layout="sap.ui.layout" xmlns="sap.m">
+	<content>
+		<form:SimpleForm editable="true" maxContainerCols="2" xmlns:form="sap.ui.layout.form">
+			<Label text="{/#FreightOrderEventMessageOverview/EventCodeName/@sap:label}"/>
+			<Text text="{EventCodeName}"/>
+			<Label text="{/#FreightOrderEventMessageOverview/EventLocation/@sap:label}"/>
+			<Text text="{EventLocation}"/>
+			<Label text="{/#FreightOrderEventMessageOverview/EventExpectedDateTime/@sap:label}"/>
+			<Text text="{ parts: [ { path:'EventExpectedDateTime' }, { path:'EventExpectedTimeZone'} ], formatter:'sap.zzem.fo.visibility.util.formatter.DateTimeDialogFormatter' }"/>
+			<Label text="{/#FreightOrderEventMessageOverview/EventDateTime/@sap:label}"/>
+			<DateTimeInput change="fnReportTime" type="DateTime" width="90%"/>
+			<Label text="{/#FreightOrderEventMessageOverview/EventTimeZone/@sap:label}"/>
+			<ComboBox change="fnOnTimeZoneChange" items="{/TimeZonesS}" placeholder="{i18n>UEM_EVT_TIMEZONE_PLACEHOLDER}"
+				selectedKey="{EventExpectedTimeZone}" width="90%">
+				<items>
+					<core:Item key="{TimeZone}"
+						text="{ parts: [ { path:'TimeZoneDescription' }, { path:'TimeZone'} ], formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"/>
+				</items>
+			</ComboBox>
+			<Label text="latitude" width="100%"> </Label>
+			<Text text="" id="txtLatitude"/>
+			<Label text="longitude" width="100%"> </Label>
+			<Text text="" id="txtLongitude"></Text>
+			<Label text="" width="100%"> </Label>
+			<core:HTML id="html"></core:HTML>
+			<Button id="Signature" text="Signature" press="onSign"> </Button>
+			<Button id="Save" text="Save" press="saveButton"></Button>
+			<Button id="clear" text="Clear" press="clearButton"></Button>
+		</form:SimpleForm>
+	</content>
+	<beginButton>
+		<Button enabled="false" press="fnOnPopupOK" text="{i18n>UEM_ADD_BTN}"/>
+	</beginButton>
+	<endButton>
+		<Button press="fnOnReportPopupClose" text="{i18n>UEM_CLOSE_BTN}"/>
+	</endButton>
+</Dialog>

@@ -1,0 +1,294 @@
+{
+    "resources": [
+        {
+            "name": "fragments/FilterCategoryDialog.fragment.xml"
+        },
+        {
+            "name": "fragments/EventMessageTable.fragment.xml"
+        },
+        {
+            "name": "fragments/MasterListItem.fragment.xml"
+        },
+        {
+            "name": "fragments/ReportDialog.fragment.xml"
+        },
+        {
+            "name": "fragments/ReportUnexpectedDialog.fragment.xml"
+        },
+        {
+            "name": "fragments/FilterValueDialog.fragment.xml"
+        },
+        {
+            "name": "fragments/DetailObjectHeader.fragment.xml"
+        },
+        {
+            "name": "fragments/DetailPropertiesForm.fragment.xml"
+        },
+        {
+            "name": ".user.project.json"
+        },
+        {
+            "name": "model/FreightOrderAssignedFreightUnitsS.json"
+        },
+        {
+            "name": "model/FreightOrderEventHandlerOverviewS.json"
+        },
+        {
+            "name": "model/FreightOrderEventMessageDetailsS.json"
+        },
+        {
+            "name": "model/TimeZonesS.json"
+        },
+        {
+            "name": "model/FreightOrderEventDateTimeFilterS.json"
+        },
+        {
+            "name": "model/FreightOrderEventHandlerDetailsS.json"
+        },
+        {
+            "name": "model/metadata.xml"
+        },
+        {
+            "name": "model/FreightOrderEventMessageOverview.json"
+        },
+        {
+            "name": "Component-preload-dbg.js"
+        },
+        {
+            "name": "version.json"
+        },
+        {
+            "name": "util/formatter.js"
+        },
+        {
+            "name": "util/eventmessage.js"
+        },
+        {
+            "name": "util/formatter-dbg.js"
+        },
+        {
+            "name": "util/parameter.js"
+        },
+        {
+            "name": "util/Signature.js"
+        },
+        {
+            "name": "util/parameter-dbg.js"
+        },
+        {
+            "name": "util/eventmessage-dbg.js"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": ".project.json"
+        },
+        {
+            "name": "Component-dbg.js"
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        },
+        {
+            "name": "fioriHtmlRunner.html"
+        },
+        {
+            "name": "view/App-dbg.controller.js"
+        },
+        {
+            "name": "view/Master.view.xml"
+        },
+        {
+            "name": "view/NoData.controller.js"
+        },
+        {
+            "name": "view/Detail-dbg.controller.js"
+        },
+        {
+            "name": "view/EVMUnexpectedDetail.view.xml"
+        },
+        {
+            "name": "view/EVMUnexpectedDetail-dbg.controller.js"
+        },
+        {
+            "name": "view/NoData.view.xml"
+        },
+        {
+            "name": "view/Master.controller.js"
+        },
+        {
+            "name": "view/EVMExpectedDetail.view.xml"
+        },
+        {
+            "name": "view/Master-dbg.controller.js"
+        },
+        {
+            "name": "view/App.controller.js"
+        },
+        {
+            "name": "view/EVMExpectedDetail.controller.js"
+        },
+        {
+            "name": "view/EVMUnexpectedDetail.controller.js"
+        },
+        {
+            "name": "view/NoData-dbg.controller.js"
+        },
+        {
+            "name": "view/Detail.controller.js"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "view/Detail.view.xml"
+        },
+        {
+            "name": "view/EVMExpectedDetail-dbg.controller.js"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "i18n/i18n_en_ar.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_zh_CN.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_ru.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_iw.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_es.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_de.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_US_sappsd.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_it.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_cs.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_ja.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_ja.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_pt.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_pl.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_cs.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_fr.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_ar.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_es.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_iw.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_en.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_fr.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_it.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_zh_CN.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_tr.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_tr.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_hu.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_de.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_pt.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_hu.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_ru.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_US_saptrc.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_en_pl.properties",
+            "raw": "i18n/i18n.properties"
+        }
+    ]
+}

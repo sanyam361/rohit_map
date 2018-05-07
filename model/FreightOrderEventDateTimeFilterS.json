@@ -1,0 +1,96 @@
+{  
+   "d":{  
+      "results":[  
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CD')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CD')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"CD",
+            "Description":"Current Day"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CW')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CW')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"CW",
+            "Description":"Current Week"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CM')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CM')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"CM",
+            "Description":"Current Month"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CQ')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CQ')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"CQ",
+            "Description":"Current Quarter"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CY')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('CY')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"CY",
+            "Description":"Current Year"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PD')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PD')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"PD",
+            "Description":"Previous Day"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PW')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PW')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"PW",
+            "Description":"Previous Week"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PM')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PM')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"PM",
+            "Description":"Previous Month"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PQ')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PQ')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"PQ",
+            "Description":"Previous Quarter"
+         },
+         {  
+            "__metadata":{  
+               "id":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PY')",
+               "uri":"https://ldcid1p.wdf.sap.corp:44300/sap/opu/odata/saptrx/em_srv/FreightOrderEventDateTimeFilterS('PY')",
+               "type":"em_srv.FreightOrderEventDateTimeFilter"
+            },
+            "Identifier":"PY",
+            "Description":"Previous Year"
+         }
+      ]
+   }
+}

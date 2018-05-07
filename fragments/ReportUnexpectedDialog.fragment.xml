@@ -1,0 +1,105 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<Dialog contentWidth="30%" title="{i18n>UEM_EXP_DIALOG_TITLE}" afterClose="onDialogAfterClose" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns="sap.m">
+	<content>
+		<form:SimpleForm editable="true" maxContainerCols="2" xmlns:form="sap.ui.layout.form">
+			<Label required="true" text="{i18n>UEM_EVTCODE_LBL}"></Label>
+			<ComboBox selectionChange="fnOnEventCodeChange" width="90%">
+				<items>
+					<core:Item key="DELAYED" text="{i18n>DELAY_FORM}"/>
+				</items>
+			</ComboBox>
+		</form:SimpleForm>
+		<layout:VerticalLayout class="marginVerticalContent" width="100%"></layout:VerticalLayout>
+	</content>
+	<dependents>
+		<form:SimpleForm editable="true" maxContainerCols="2" xmlns:form="sap.ui.layout.form">
+			<form:title>
+				<core:Title text="{i18n>DELAY_FORM}"/>
+			</form:title>
+			<form:content>
+				<Label required="true" text="{i18n>UEM_DEL_EVT_FOR_LBL}"/>
+				<Input placeholder="{i18n>PLACEHOLDER_DELAY_EVENT_LBL}" showSuggestion="true" suggestionItemSelected="fnOnPropertyEnhanced"
+					suggestionRows="{ToEventMessageOverview}" width="90%">
+					<suggestionColumns>
+						<Column width="2em">
+							<Text text="{/#FreightOrderEventMessageOverview/EventCodeName/@sap:label}"/>
+						</Column>
+						<Column width="2em">
+							<Text text="{/#FreightOrderEventMessageOverview/EventLocation/@sap:label}"/>
+						</Column>
+					</suggestionColumns>
+					<suggestionRows>
+						<ColumnListItem>
+							<cells>
+								<Text text="{EventCodeName}"></Text>
+								<Text
+									text="{ parts: [ { path: 'EventLocationName' }, { path: 'EventLocation' } ], formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"/>
+							</cells>
+						</ColumnListItem>
+					</suggestionRows>
+				</Input>
+				<Label required="true" text="{i18n>UEM_EVT_LOCATION}"></Label>
+				<Input liveChange="fnOnProperty" width="90%">
+					<customData>
+						<core:CustomData key="Location" value="Location"/>
+					</customData>
+				</Input>
+				<Label required="true" text="{i18n>UEM_EVT_DATETIME_LBL}"></Label>
+				<DateTimeInput change="fnActualDate" type="DateTime" width="90%">
+					<customData>
+						<core:CustomData key="Property" value=""/>
+					</customData>
+				</DateTimeInput>
+				<Label required="true" text="{i18n>UEM_EVT_TIMEZONE_LBL}"></Label>
+				<ComboBox change="fnOnTimeZoneChangeEnhanced" items="{/TimeZonesS}" placeholder="{i18n>UEM_EVT_TIMEZONE_PLACEHOLDER}" width="90%">
+					<items>
+						<core:Item key="{TimeZone}"
+							text="{ parts: [ { path:'TimeZoneDescription' }, { path:'TimeZone'} ], formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"/>
+					</items>
+				</ComboBox>
+				<Label required="true" text="{i18n>UEM_EST_DELAY_DATETIME_LBL}"></Label>
+				<DateTimeInput change="fnOnParameterTimeStamp" type="DateTime" width="90%">
+					<customData>
+						<core:CustomData key="ParameterName" value="ODT40_EXPEC_DELAY_TIMESTAMP"/>
+						<core:CustomData key="ParameterAction" value=""/>
+						<core:CustomData key="ParameterType" value=""/>
+					</customData>
+				</DateTimeInput>
+				<Label required="true" text="{i18n>UEM_EST_DELAY_TIMEZONE_LBL}"></Label>
+				<ComboBox change="fnOnParameterTimeZone" items="{/TimeZonesS}" placeholder="{i18n>UEM_EVT_TIMEZONE_PLACEHOLDER}"
+					selectionChange="fnOnTimeZoneChangeEnhanced" width="90%">
+					<items>
+						<core:Item key="{TimeZone}"
+							text="{ parts: [ { path:'TimeZoneDescription' }, { path:'TimeZone'} ], formatter:'sap.zzem.fo.visibility.util.formatter.ObjectFormatter' }"/>
+					</items>
+					<customData>
+						<core:CustomData key="ParameterName" value="ODT20_EXPEC_DELAY_TZON"/>
+						<core:CustomData key="ParameterAction" value=""/>
+						<core:CustomData key="ParameterType" value=""/>
+					</customData>
+				</ComboBox>
+				<Label required="" text="{i18n>UEM_REASON_LBL}"/>
+				<Input liveChange="fnOnProperty" width="90%">
+					<customData>
+						<core:CustomData key="Property" value="EventReasonText"/>
+					</customData>
+				</Input>
+				
+				<Label text="latitude" width="100%"> </Label>
+				<Text text="" id="txtLatitude1"/>
+				<Label text="longitude" width="100%"> </Label>
+				<Text text="" id="txtLongitude1"></Text>
+			</form:content>
+		</form:SimpleForm>
+	</dependents>
+	<beginButton>
+		<Button enabled="false" press="fnReportOK" text="{i18n>UEM_ADD_BTN}"/>
+	</beginButton>
+	<endButton>
+		<Button press="fnOnDelayPopupClose" text="{i18n>UEM_CLOSE_BTN}"/>
+	</endButton>
+</Dialog>

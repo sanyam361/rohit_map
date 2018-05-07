@@ -1,0 +1,8 @@
+{ "application" : "zzem.fo.visibility",
+  "version" : "1.5.18",
+  "buildNumber" : "48",
+  "buildId" : "2016-01-26_10-08-18",
+  "branch" : "${env.GIT_BRANCH}",
+  "revision" : "${env.GIT_COMMIT}",
+  "GitURL" : "${env.GIT_URL}"
+}

@@ -1,0 +1,37 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<mvc:View controllerName="zzem.fo.visibility.view.Master" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:shellfooter="sap.ushell.ui.footerbar" xmlns="sap.m">
+	<Page id="page" title="{i18n>MASTER_TITLE_NO_COUNT}">
+		<subHeader id="subHeader">
+			<Bar>
+				<contentMiddle>
+					<SearchField id="searchField" placeholder="{i18n>SEARCHFIELD_PLACEHOLDER}" search="handleSearch" showRefreshButton="{device>/isNoTouch}"
+						tooltip="{i18n>MASTER_SEARCH_TOOLTIP}" width="100%"></SearchField>
+				</contentMiddle>
+			</Bar>
+		</subHeader>
+		<content id="content">
+			<List growing="true" growingScrollToLoad="true" id="list" mode="{device>/listMode}" selectionChange="handleSelect">
+				<infoToolbar>
+					<Toolbar active="true" id="listInfoToolbar" press="onFilterButtonPress" visible="false">
+						<Label/>
+					</Toolbar>
+				</infoToolbar>
+			</List>
+		</content>
+		<dependents>
+			<core:Fragment fragmentName="zzem.fo.visibility.fragments.FilterCategoryDialog" type="XML"/>
+		</dependents>
+		<footer id="footer">
+			<Bar>
+				<contentRight>
+					<Button icon="sap-icon://filter" press="onFilterButtonPress"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>
